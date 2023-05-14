@@ -1,0 +1,125 @@
+<main class="d-flex flex-column gap-5 p-5">
+  <section>
+    <h5 class="tx-branco-2">Filmes Populares</h5>
+    <div class="d-flex">
+      <div
+        *ngFor="let filme of filmesPopulares?.results; let i = index"
+      >
+        <div class="card mx-1" style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h5 class="tx-branco-2">Filmes em Cartaz</h5>
+    <div class="d-flex">
+      <div
+        *ngFor="let filme of filmesEmCartaz?.results; let i = index"
+      >
+        <div class="card mx-1" style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h5 class="tx-branco-2">Filmes Mais Votados</h5>
+    <div class="d-flex">
+      <div
+        *ngFor="let filme of filmesMaisVotados?.results; let i = index"
+      >
+        <div class="card mx-1" style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h5 class="tx-branco-2">Filmes Lançamentos</h5>
+    <div class="d-flex">
+      <div
+        *ngFor="let filme of filmesLancamento?.results; let i = index"
+      >
+        <div class="card mx-1" style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h5 class="tx-branco-2">Filmes Tendências</h5>
+    <div class="d-flex">
+      <div
+        *ngFor="let filme of filmesTendencia?.results; let i = index"
+      >
+        <div class="card mx-1" style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h5 class="tx-branco-2">Filmes Originais</h5>
+    <div class="d-flex ">
+      <div
+        class=""
+        *ngFor="let filme of filmesOriginal?.results; let i = index"
+      >
+        <div class="card mx-1 " style="width: 15rem" *ngIf="i < 5">
+          <img
+            src="{{ filme.backdrop_path }}"
+            class="card-img-top"
+            alt="{{ filme.title }}"
+          />
+          <!-- <div class="card-body">
+            <p class="card-text">
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
