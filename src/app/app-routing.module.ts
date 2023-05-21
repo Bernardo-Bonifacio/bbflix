@@ -1,16 +1,19 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './componentes/header/header.component';
-import { FilmesDestaqueComponent } from './componentes/filmes-destaque/filmes-destaque.component';
-import { FilmesSecoesComponent } from './componentes/filmes-secoes/filmes-secoes.component';
-import { FooterComponent } from './componentes/footer/footer.component';
+
+import { FilmesComponent } from './views/filmes/filmes.component';
+import { SeriesComponent } from './views/series/series.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PesquisasComponent } from './views/pesquisas/pesquisas.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'header', pathMatch: 'full' },
+  { path: '', redirectTo: 'filmes', pathMatch: 'full' },
   { path: 'header', component: HeaderComponent },
-  { path: 'filmes-destaque', component: FilmesDestaqueComponent },
-  { path: 'filmes-secao', component: FilmesSecoesComponent },
   { path: 'footer', component: FooterComponent },
+  { path: 'filmes', component: FilmesComponent },
+  { path: 'series', component: SeriesComponent },
+  { path: 'pesquisas', component: PesquisasComponent },
 ];
 
 @NgModule({

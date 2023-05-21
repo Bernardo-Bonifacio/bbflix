@@ -1,0 +1,143 @@
+<main class="container-fluid p-0 m-0">
+  <section class="container-fluid p-0 vh-100">
+    <div
+      *ngFor="let volume of seriesExibindoHoje?.results; let i = index"
+      style="background-image: url('{{ volume.backdrop_path }}'); background-size: cover"
+    >
+      <div
+        *ngIf="i < 1"
+        class="container-fluid ps-5 d-flex flex-column justify-content-center gap-2 vh-100"
+      >
+        <h2 class="w-50 fs-4rem text-light">{{ volume.title }}</h2>
+        <div>
+          <p class="w-50 fs-1rem text-light">
+            {{ volume.overview }}
+          </p>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn btn-light rounded-1 py-0 px-4 me-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="3rem"
+              height="3rem"
+              fill="currentColor"
+              class="bi bi-play-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+              />
+            </svg>
+            Assistir
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary rounded-1 py-2 px-4 ms-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.75rem"
+              height="1.75rem"
+              fill="currentColor"
+              class="bi bi-info-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+              />
+            </svg>
+            Mais informações
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid d-flex flex-column gap-5 p-5">
+    <div class="container-fluid">
+      <h5 class="tx-branco-2">Séries Exibindo Hoje</h5>
+      <div class="d-flex">
+        <div *ngFor="let volume of seriesExibindoHoje?.results; let i = index">
+          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+            <img
+              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg'}}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h5 class="tx-branco-2">Séries No Ar</h5>
+      <div class="d-flex">
+        <div *ngFor="let volume of seriesNoAr?.results; let i = index">
+          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+            <img
+              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h5 class="tx-branco-2">Séries Populares</h5>
+      <div class="d-flex">
+        <div *ngFor="let volume of seriesPopulares?.results; let i = index">
+          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+            <img
+              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h5 class="tx-branco-2">Séries Mais Votadas</h5>
+      <div class="d-flex">
+        <div *ngFor="let volume of seriesMaisVotadas?.results; let i = index">
+          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+            <img
+              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h5 class="tx-branco-2">Series Originais</h5>
+      <div class="d-flex">
+        <div *ngFor="let volume of seriesOriginais?.results; let i = index">
+          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+            <img
+              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
