@@ -57,3 +57,9 @@ body {
 .ps-10 {
   padding-left: 10rem;
 }
+
+/* events */
+.pointer-none {
+  pointer-events: none;
+}
+

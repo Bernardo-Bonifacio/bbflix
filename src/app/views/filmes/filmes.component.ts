@@ -8,7 +8,7 @@ import { VolumeService } from 'src/app/service/volume.service';
   templateUrl: './filmes.component.html',
   styleUrls: ['./filmes.component.css'],
 })
-export class FilmesComponent implements OnInit, OnDestroy {
+export class FilmesComponent implements OnInit {
   ak = '676fc63217dc26dae038bae8ff1953e2';
   imgCorrompida: string = 'http://image.tmdb.org./t/p/originalnull?api_key=' + this.ak;
   subscription!: Subscription;
@@ -84,9 +84,9 @@ export class FilmesComponent implements OnInit, OnDestroy {
     return volume;
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   this.subscription.unsubscribe();
+  // }
 
   // FORA DO AR
 

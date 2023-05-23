@@ -26,13 +26,12 @@
       </svg>
     </button>
   </form>
-  <div *ngIf="mensagemErro">
+  <!-- <div *ngIf="mensagemErro">
     {{ mensagemErro}}
   </div>
-  <div *ngIf="totalDeVolumes$ | async">
+  <div class="text-center text-white" *ngIf="totalDeVolumes$ | async">
     {{ volumesResultado.total_results }} resultados encontrados
-  </div>
-
+  </div> -->
   <div class="container-fluid" *ngIf="volumesEncontrados$ | async as filmesPesquisados">
     <div class="d-flex flex-wrap">
       <div *ngFor="let volume of filmesPesquisados?.results; let i = index">
