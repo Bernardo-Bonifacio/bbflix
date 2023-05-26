@@ -9,8 +9,8 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   background-color: var(--preto-1);
+  font-family: "Roboto", sans-serif;
 }
 
 /* font-size */
@@ -63,3 +63,72 @@ body {
   pointer-events: none;
 }
 
+/* dimensions */
+.secoes {
+  padding: 1rem 0;
+}
+
+.card {
+  width: 6.5rem;
+  height: 4.5rem;
+}
+
+.card-text {
+  font-size: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 8.75rem;
+    height: 6rem;
+  }
+
+  .card-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .secoes {
+    padding: 2rem 0.5rem;
+  }
+
+  .card {
+    width: 11.5rem;
+    height: 8rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .secoes {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    width: 14rem;
+    height: 9.5rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .secoes {
+    padding: 2rem;
+  }
+
+  .card {
+    width: 16rem;
+    height: 10.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}

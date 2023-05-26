@@ -53,19 +53,19 @@
     </div>
   </section>
 
-  <section class="container-fluid d-flex flex-column gap-5 p-5">
+  <section class="secoes container-fluid d-flex flex-column gap-5">
     <div class="container-fluid">
       <h5 class="tx-branco-2">Séries Exibindo Hoje</h5>
       <div class="d-flex">
         <div *ngFor="let volume of seriesExibindoHoje?.results; let i = index">
-          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+          <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
               src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg'}}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
             </div>
           </div>
         </div>
@@ -75,14 +75,14 @@
       <h5 class="tx-branco-2">Séries No Ar</h5>
       <div class="d-flex">
         <div *ngFor="let volume of seriesNoAr?.results; let i = index">
-          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+          <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
               src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
             </div>
           </div>
         </div>
@@ -92,14 +92,14 @@
       <h5 class="tx-branco-2">Séries Populares</h5>
       <div class="d-flex">
         <div *ngFor="let volume of seriesPopulares?.results; let i = index">
-          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+          <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
               src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
             </div>
           </div>
         </div>
@@ -109,14 +109,14 @@
       <h5 class="tx-branco-2">Séries Mais Votadas</h5>
       <div class="d-flex">
         <div *ngFor="let volume of seriesMaisVotadas?.results; let i = index">
-          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+          <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
               src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
             </div>
           </div>
         </div>
@@ -126,14 +126,14 @@
       <h5 class="tx-branco-2">Series Originais</h5>
       <div class="d-flex">
         <div *ngFor="let volume of seriesOriginais?.results; let i = index">
-          <div class="card mx-1 border border-warning-subtle" style="width: 15rem" *ngIf="i < 5">
+          <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
               src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
             </div>
           </div>
         </div>

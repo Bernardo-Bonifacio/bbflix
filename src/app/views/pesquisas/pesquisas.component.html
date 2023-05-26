@@ -1,53 +1,57 @@
-<section class="container-fluid d-flex flex-column gap-5 p-5 min-vh-100">
-  <form class="container d-flex" role="search">
-    <input
-      class="form-control me-2 bg-black text-light border border-1 rounded-0"
-      type="search"
-      placeholder="Pesquisar Filmes e Séries"
-      aria-label="Search"
-      name="campoPesquisar"
-      [formControl]="campoPesquisar"
-    />
-    <button
-      class="btn btn-outline-success border border-0"
-      type="submit"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1.5rem"
-        height="1.5rem"
-        fill="currentColor"
-        class="bi bi-search text-light"
-        viewBox="0 0 16 16"
+<main class="container">
+  <section class="secoes container d-flex flex-column gap-5 p-5 min-vh-100">
+    <form class="container d-flex" role="search">
+      <input
+        class="form-control me-2 bg-black text-light border border-1 rounded-0"
+        type="search"
+        placeholder="Pesquisar Filmes e Séries"
+        aria-label="Search"
+        name="campoPesquisar"
+        [formControl]="campoPesquisar"
+      />
+      <button
+        class="btn btn-outline-success border border-0"
+        type="submit"
       >
-        <path
-          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-        />
-      </svg>
-    </button>
-  </form>
-  <!-- <div *ngIf="mensagemErro">
-    {{ mensagemErro}}
-  </div>
-  <div class="text-center text-white" *ngIf="totalDeVolumes$ | async">
-    {{ volumesResultado.total_results }} resultados encontrados
-  </div> -->
-  <div class="container-fluid" *ngIf="volumesEncontrados$ | async as filmesPesquisados">
-    <div class="d-flex flex-wrap">
-      <div *ngFor="let volume of filmesPesquisados?.results; let i = index">
-        <div class="card m-1 border border-warning-subtle" style="width: 14.5rem" *ngIf="i < 20">
-          <img
-            src="{{
-              volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg'
-            }}"
-            class="card-img-top"
-            alt="{{ volume.title }}"
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5rem"
+          height="1.5rem"
+          fill="currentColor"
+          class="bi bi-search text-light"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
           />
-          <div class="card-body p-0 bg-dark text-white text-center">
-            <p class="card-text">{{ volume.title | slice:0:25 }}</p>
+        </svg>
+      </button>
+    </form>
+    <!-- <div *ngIf="mensagemErro">
+      {{ mensagemErro}}
+    </div>
+    <div class="text-center text-white" *ngIf="totalDeVolumes$ | async">
+      {{ volumesResultado.total_results }} resultados encontrados
+    </div> -->
+    <div class="container-fluid" *ngIf="volumesEncontrados$ | async as filmesPesquisados">
+      <div class="d-flex flex-wrap">
+        <div *ngFor="let volume of filmesPesquisados?.results; let i = index">
+          <div class="card m-1 border border-warning-subtle" *ngIf="i < 20">
+            <img
+              src="{{
+                volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
+              class="card-img-top"
+              alt="{{ volume.title }}"
+            />
+            <div class="card-body p-0 bg-dark text-white text-center">
+              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
+
+
