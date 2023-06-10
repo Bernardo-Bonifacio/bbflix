@@ -1,3 +1,5 @@
+// Projeto BBFLIX
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { VolumesResultado } from 'src/app/models/interfaces';
@@ -10,7 +12,8 @@ import { VolumeService } from 'src/app/service/volume.service';
 })
 export class FilmesComponent implements OnInit {
   ak = '676fc63217dc26dae038bae8ff1953e2';
-  imgCorrompida: string = 'http://image.tmdb.org./t/p/originalnull?api_key=' + this.ak;
+  imgCorrompida: string =
+    'http://image.tmdb.org./t/p/originalnull?api_key=' + this.ak;
   subscription!: Subscription;
   filmesLancamento!: VolumesResultado;
   filmesPopulares!: VolumesResultado;
@@ -83,10 +86,6 @@ export class FilmesComponent implements OnInit {
     }
     return volume;
   }
-
-  // ngOnDestroy() {
-  //   this.subscription.unsubscribe();
-  // }
 
   // FORA DO AR
 

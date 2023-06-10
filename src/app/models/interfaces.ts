@@ -1,3 +1,5 @@
+// Projeto BBFLIX
+
 // Livro
 export interface Volume {
   name?: string;
@@ -38,7 +40,7 @@ export interface VolumeInfo {
 
 // Item
 export interface VolumeItem {
-  volume: VolumeInfo
+  volume: VolumeInfo;
 }
 
 // LivrosResultado
@@ -48,4 +50,3 @@ export interface VolumesResultado {
   total_pages: number;
   total_results: number;
 }
-

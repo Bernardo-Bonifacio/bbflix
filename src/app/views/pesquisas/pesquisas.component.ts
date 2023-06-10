@@ -1,3 +1,5 @@
+// Projeto BBFLIX
+
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {
@@ -37,10 +39,10 @@ export class PesquisasComponent {
     switchMap((valorDigitado) =>
       this.volumeService.getPesquisarFilmes(valorDigitado)
     ),
-    map(resultado => this.volumesResultado = resultado),
-    catchError(erro => {
-      console.log(erro)
-      return of()
+    map((resultado) => (this.volumesResultado = resultado)),
+    catchError((erro) => {
+      console.log(erro);
+      return of();
     })
   );
 

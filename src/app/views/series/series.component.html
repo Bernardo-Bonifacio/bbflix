@@ -1,3 +1,5 @@
+<!-- Projeto BBFLIX -->
+
 <main class="container-fluid p-0 m-0">
   <section class="container-fluid p-0 vh-100">
     <div
@@ -15,7 +17,7 @@
           </p>
         </div>
         <div class="d-flex">
-          <button type="button" class="btn btn-light rounded-1 py-0 px-4 me-1">
+          <button type="button" class="btn btn-light rounded-1 py-0 px-4 me-1 disabled">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="3rem"
@@ -32,7 +34,7 @@
           </button>
           <button
             type="button"
-            class="btn btn-secondary rounded-1 py-2 px-4 ms-1"
+            class="btn btn-secondary rounded-1 py-2 px-4 ms-1 disabled"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,12 +62,16 @@
         <div *ngFor="let volume of seriesExibindoHoje?.results; let i = index">
           <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
-              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg'}}"
+              src="{{
+                volume.backdrop_path != imgCorrompida
+                  ? volume.backdrop_path
+                  : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+              <p class="card-text">{{ volume.title | slice : 0 : 20 }}</p>
             </div>
           </div>
         </div>
@@ -77,12 +83,16 @@
         <div *ngFor="let volume of seriesNoAr?.results; let i = index">
           <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
-              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              src="{{
+                volume.backdrop_path != imgCorrompida
+                  ? volume.backdrop_path
+                  : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+              <p class="card-text">{{ volume.title | slice : 0 : 20 }}</p>
             </div>
           </div>
         </div>
@@ -94,12 +104,16 @@
         <div *ngFor="let volume of seriesPopulares?.results; let i = index">
           <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
-              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              src="{{
+                volume.backdrop_path != imgCorrompida
+                  ? volume.backdrop_path
+                  : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+              <p class="card-text">{{ volume.title | slice : 0 : 20 }}</p>
             </div>
           </div>
         </div>
@@ -111,12 +125,16 @@
         <div *ngFor="let volume of seriesMaisVotadas?.results; let i = index">
           <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
-              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              src="{{
+                volume.backdrop_path != imgCorrompida
+                  ? volume.backdrop_path
+                  : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+              <p class="card-text">{{ volume.title | slice : 0 : 20 }}</p>
             </div>
           </div>
         </div>
@@ -128,12 +146,16 @@
         <div *ngFor="let volume of seriesOriginais?.results; let i = index">
           <div class="card mx-1 border border-warning-subtle" *ngIf="i < 5">
             <img
-              src="{{ volume.backdrop_path != imgCorrompida ? volume.backdrop_path : '../../../assets/imagem-indisponivel.jpeg' }}"
+              src="{{
+                volume.backdrop_path != imgCorrompida
+                  ? volume.backdrop_path
+                  : '../../../assets/imagem-indisponivel.jpeg'
+              }}"
               class="card-img-top"
               alt="{{ volume.title }}"
             />
             <div class="card-body p-0 bg-dark text-white text-center">
-              <p class="card-text">{{ volume.title | slice:0:20 }}</p>
+              <p class="card-text">{{ volume.title | slice : 0 : 20 }}</p>
             </div>
           </div>
         </div>

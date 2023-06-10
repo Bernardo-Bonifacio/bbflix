@@ -1,3 +1,5 @@
+// Projeto BBFLIX
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PesquisasComponent } from './pesquisas.component';
@@ -8,7 +10,7 @@ describe('PesquisasComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PesquisasComponent]
+      declarations: [PesquisasComponent],
     });
     fixture = TestBed.createComponent(PesquisasComponent);
     component = fixture.componentInstance;

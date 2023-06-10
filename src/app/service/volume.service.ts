@@ -1,3 +1,5 @@
+// Projeto BBFLIX
+
 import { VolumesResultado } from './../models/interfaces';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -80,7 +82,7 @@ export class VolumeService {
   // PESQUISAR
   getPesquisarFilmes(valorDigitado: string): Observable<VolumesResultado> {
     const params = new HttpParams().append('query', valorDigitado);
-    return this.http.get<VolumesResultado>(this.urlPesquisa, { params })
+    return this.http.get<VolumesResultado>(this.urlPesquisa, { params });
   }
 
   // FORA DO AR
